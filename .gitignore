@@ -1,0 +1,8 @@
+src
+*.lib
+*.exe
+*.dll
+*.obj
+*.exp
+*.ico
+*.res
