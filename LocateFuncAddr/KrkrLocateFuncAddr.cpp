@@ -95,7 +95,7 @@ void CMyWnd::OnBtnClicked() {
 	void *ptr = TVPGetImportFuncPtr(def);
 	if (ptr != nullptr) {
 		CString text;
-		text.Format(_T("Address: %p"), ptr);
+		text.Format(_T("Address: %p (base + %x)"), ptr, (uintptr_t)ptr - (uintptr_t)GetModuleHandle(NULL));
 		m_static2.SetWindowText(text);
 		(m_static2.GetParent())->RedrawWindow();
 	}
