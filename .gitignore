@@ -1,4 +1,6 @@
 src
+bin
+obj
 *.lib
 *.exe
 *.dll

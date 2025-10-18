@@ -1,0 +1,48 @@
+﻿<Window x:Class="KrkrReinsertBres.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:KrkrReinsertBres" mc:Ignorable="d" Title="KrkrReinsertBres" Width="525" SizeToContent="Height">
+        <Grid Height="265" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="360" />
+                        <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+			<RowDefinition Height="30" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                        <Style TargetType="{x:Type Button}">
+                                <Setter Property="Height" Value="25" />
+                                <Setter Property="Margin" Value="10,0,0,0" />
+                        </Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                        <Style TargetType="{x:Type TextBox}">
+                                <Setter Property="Height" Value="25" />
+                                <Setter Property="VerticalContentAlignment" Value="Center" />
+                        </Style>
+                </Grid.Resources>
+                <RadioButton Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Content="STARTUP.TJS" />
+                <RadioButton Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Name="bsdRadio" Content="BOOTSTRAP (Decrypt)" />
+                <RadioButton Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Name="bseRadio" Content="BOOTSTRAP (Encrypt)" />
+		<TextBlock Grid.Column="0" Grid.Row="4">First Block</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="4" Name="fbTextBox"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="6">Input File</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="6" Name="ifTextBox"></TextBox>
+                <Button Grid.Column="2" Grid.Row="6" Click="OpenFileBtn_Click">Select</Button>
+                <TextBlock Grid.Column="0" Grid.Row="8">Output File</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="8" Name="ofTextBox"></TextBox>
+                <Button Grid.Column="2" Grid.Row="8" Click="SaveFileBtn_Click">Select</Button>
+                <Button Grid.Column="2" Grid.Row="10" Margin="0" Click="RunBtn_Click">Run</Button>
+        </Grid>
+</Window>
