@@ -69,7 +69,7 @@ public class Crypt {
 		MemoryStream result = new MemoryStream();
 		BinaryWriter bw = new BinaryWriter(result);
 		bw.Write((uint)compressed.Length);
-		bw.Write(new byte[] { 0x00, 0xA6, 0x0B, 0x00 });
+		bw.Write((uint)b.Length);
 		compressed.Position = 0;
 		compressed.CopyTo(result);
 		return result.ToArray();
