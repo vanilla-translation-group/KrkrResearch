@@ -1,0 +1,5 @@
+{
+	"rotate": "after",
+	"initial": 30,
+	"order": [0, 3, 2, 1]
+}

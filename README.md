@@ -13,3 +13,7 @@ Decrypt and encrypt the binary resource files embedded in main program.
 How to use: run `findfirstblock.js` with frida, then select type and paste the block found.
 
 TODO: reverse the block generation algorithm
+
+## cx\_v3\_decc
+
+Decrypt and encrypt the `decc` section of old-style cxdec (you should be able to find the string `C:\Program Files\Borland\CBuilder5\Projects\cx_v3\src\cxdec` in these DLLs).
